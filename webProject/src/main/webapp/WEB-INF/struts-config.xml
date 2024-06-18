@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+          
+<struts-config>	
+	<form-beans>
+		<form-bean
+			name="wa" type="action.writeActionForm">
+			<form-property name="postTitle" type="java.lang.String"/>
+			<form-property name="postContent" type="java.lang.String"/>
+		</form-bean>
+		<form-bean
+			name="ua" type="action.updateActionForm">
+			<form-property name="postID" type="java.lang.String"/>
+			<form-property name="postTitle" type="java.lang.String"/>
+			<form-property name="postContent" type="java.lang.String"/>
+		</form-bean>
+		<form-bean
+			name="ja" type="action.joinActionForm">
+			<form-property name="userID" type="java.lang.String"/>
+			<form-property name="userPassword" type="java.lang.String"/>
+			<form-property name="userName" type="java.lang.String"/>
+			<form-property name="userGender" type="java.lang.String"/>
+			<form-property name="userEmail" type="java.lang.String"/>
+		</form-bean>
+	</form-beans>
+
+	<action-mappings>
+		<!-- 메인화면 -->
+		<action path="/main" type="action.mainAction" scope="request" parameter="method">
+         	<forward name="main" path="/main.jsp" />
+      	</action>
+      	
+      	<!-- 로그인 -->
+		<action path="/login" forward="/login.jsp"/>
+         	
+		<action path="/login_ok" type="action.loginAction" parameter="method">
+         	<forward name="main" path="/main.jsp" />
+         	<forward name="login" path="/login.jsp" />
+      	</action>
+      	
+      	<!-- 회원가입 -->
+      	<action path="/join" forward="/join.jsp"/>
+      	
+      	<action path="/join_ok" type="action.joinAction" parameter="method">
+         	<forward name="login" path="/login.jsp" />
+         	<forward name="join" path="/join.jsp" />
+      	</action>
+
+<!--       	<action  -->
+<!--       	path="/join_ok"  -->
+<!--       	name="ja"   -->
+<!--       	scope="request" -->
+<!--       	input="/join.jsp" -->
+<!--       	type="action.joinAction"  -->
+<!--       	> -->
+<!--       		<forward name="main" path="/main.jsp" /> -->
+<!--       		<forward name="join" path="/join.jsp"/> -->
+<!--       	</action> -->
+      	
+      	<!-- 로그아웃 -->
+      	<action path="/logout" type="action.logoutAction" name="logoutForm" scope="request" parameter="method">
+         	<forward name="logout" path="/main.jsp" />
+      	</action>
+      	
+      	<!-- 게시판 관련 -->
+		<action path="/post" type="action.postAction" name="postForm" scope="request" parameter="method">
+         	<forward name="post" path="/post.jsp" />
+      	</action>
+      	
+      	<action path="/view" type="action.viewAction" name="viewForm" scope="request" parameter="method">
+      		<forward name="view" path="/view.jsp" />
+      	</action>
+      	
+      	<action path="/write" forward="/write.jsp"/>
+      	
+      	<action 
+      	path="/write_ok" 
+      	name="wa"  
+      	scope="request"
+      	input="/write.jsp"
+      	type="action.writeAction" 
+      	>
+      		<forward name="post" path="/post.jsp" />
+      	</action>
+      	
+      	<action path="/update" forward="/update.jsp"/>
+      	
+      	<action path="/update_ok" 
+      	name="ua" 
+      	scope="request"
+      	input="/update.jsp"
+      	type="action.updateAction" 
+      	>
+      		<forward name="view" path="/view.jsp" />
+      	</action>
+      	
+      	<action path="/delete" type="action.deleteAction">
+      		<forward name="delete" path="/post.jsp" />
+      	</action>
+      	
+	</action-mappings>
+</struts-config>
