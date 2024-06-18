@@ -51,24 +51,24 @@ webProject
 사용자가 로그인에 성공하게 되면 게시글을 `글쓰기`를 통해 게시글을 작성할 수 있습니다.<br/>
 <img src = "https://github.com/prod-j/coupon-version-management/assets/106741517/4ce1a60e-6a1a-4463-a894-d0326694614b"/>
 
-#### 게시글 작성
+### 게시글 작성
 제목과 내용을 작성합니다.
 <img src = "https://github.com/prod-j/coupon-version-management/assets/106741517/f8a24f8e-f0e9-48d4-94f2-1a556cfe32c5"/>
 내용 작성 후, `글쓰기`를 통해 게시글을 등록합니다.
 <img src = "https://github.com/prod-j/coupon-version-management/assets/106741517/56a2444a-feba-4ff4-956a-3f53b4715908"/>
 
-#### 게시글 상세보기
+### 게시글 상세보기
 작성한 게시글의 내용을 볼 수 있습니다. <br/>
 게시글의 **작성자만 게시글을 수정, 삭제**할 수 있습니다. <br/>
 `수정`을 통해 게시글을 원하는 내용으로 수정할 수 있습니다. <br/>
 `삭제`를 통해 원하는 게시글을 삭제할 수 있습니다.
 <img src = "https://github.com/prod-j/coupon-version-management/assets/106741517/fd34e696-5dad-4dde-85d2-6997b56bf5ce"/>
 
-#### 게시글 수정
+### 게시글 수정
 원하는 내용으로 수정 후 `수정`통해 게시글을 수정합니다.
 <img src = "https://github.com/prod-j/coupon-version-management/assets/106741517/10bd530f-9d87-48d9-a428-af7c16ce674a"/>
 
-#### 게시글 삭제
+### 게시글 삭제
 `삭제`시 팝업을 통해 사용자에게 삭제 여부를 확인합니다.
 <img src = "https://github.com/prod-j/coupon-version-management/assets/106741517/a925e128-4115-4481-87a2-95c9f503402c"/>
 `확인`을 누르게 되면 성공적으로 게시글을 삭제할 수 있습니다.
