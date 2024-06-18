@@ -38,4 +38,11 @@ webProject
 │   ├── writeAction.java
 │   ├── writeActionForm.java
 ```
+## 프로젝트 구현
+### 메인 화면
+사용자 접속 시 보이는 홈 화면입니다.<br/>
+우측 상단 [접속하기]를 통해 로그인을 진행할 수 있으며, Language 토글을 통해 원하는 언어로 변경이 가능합니다.<br/>
+[게시판]을 선택하면 게시글의 목록을 조회할 수 있습니다.
+<img src = "https://github.com/TNALSA/struts-web/assets/106741517/890194c3-d510-4b39-b0d3-d83af950dedb"/>
+### 게시판 화면
 
